@@ -1,14 +1,12 @@
 name: GitHub Actions Demo
-on:
-  repository_dispatch:
-    types: [run_my_workflow]
-
+on: 
+    repository_dispatch:
+     types: [run_my_workflow]
 jobs:
   Example-Actions-Job:
     name: Exploring GitHub Actions
     runs-on: ubuntu-latest
     steps:
-     - run: echo "payload field is ${{ github.event.client_payload.mtdata }}"
       # Display the event that triggered the workflow
       - run: echo "The job was triggered by a ${{ github.event_name }} event."
       
@@ -20,7 +18,7 @@ jobs:
       
       # Use Action located in https://github.com/actions
       - name: Check out repository code
-        uses: actions/checkout@v3  
+        uses: actions/checkout@v2  
       
       - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
       
