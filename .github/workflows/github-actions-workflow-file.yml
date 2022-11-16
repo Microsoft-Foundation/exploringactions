@@ -7,7 +7,7 @@ jobs:
     name: Exploring GitHub Actions
     runs-on: ubuntu-latest
     steps:
-      # Display the event that triggered the workflow
+      # Display the pay load field and data
       - run: echo "Payload field is ${{ github.event.client_payload.mydata }}"
       # Display the event that triggered the workflow
       - run: echo "The job was triggered by a ${{ github.event_name }} event."
